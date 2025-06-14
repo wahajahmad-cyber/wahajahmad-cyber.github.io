@@ -80,31 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Dark mode toggle
-    const darkModeToggle = document.querySelector('.theme-toggle');
-    const body = document.body;
-    
-    // Check for saved theme preference or respect OS preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    const currentTheme = localStorage.getItem('theme');
-    
-    if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
-        body.classList.add('dark-mode');
-        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-    }
-    
-    darkModeToggle.addEventListener('click', function() {
-        if (body.classList.contains('dark-mode')) {
-            body.classList.remove('dark-mode');
-            localStorage.setItem('theme', 'light');
-            this.innerHTML = '<i class="fas fa-moon"></i>';
-        } else {
-            body.classList.add('dark-mode');
-            localStorage.setItem('theme', 'dark');
-            this.innerHTML = '<i class="fas fa-sun"></i>';
-        }
-    });
-    
     // Project filtering
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');

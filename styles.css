@@ -29,17 +29,6 @@ body {
     transition: var(--transition);
 }
 
-body.dark-mode {
-    --primary: #60a5fa;
-    --primary-dark: #3b82f6;
-    --secondary: #34d399;
-    --dark: #f9fafb;
-    --light: #111827;
-    --gray: #9ca3af;
-    --light-gray: #1f2937;
-    --card-bg: #1f2937;
-}
-
 .container {
     width: 85%;
     max-width: 1200px;
@@ -118,17 +107,9 @@ header {
     color: var(--primary);
 }
 
-.theme-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: var(--dark);
-    transition: var(--transition);
-}
-
-.theme-toggle:hover {
+.resume-link {
     color: var(--primary);
+    font-weight: 600;
 }
 
 .mobile-menu-btn {
