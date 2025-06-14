@@ -5,19 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wahaj Ahmed Ansari | DevOps Engineer</title>
     <meta name="description" content="Wahaj Ahmed Ansari - DevOps Engineer specializing in CI/CD, AWS, and Kubernetes">
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <!-- Preloader -->
     <div class="preloader">
-        <div class="loader"></div>
+        <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
 
     <!-- Header -->
     <header class="header">
         <div class="container nav-container">
-            <a href="#" class="logo">Wahaj<span>.</span></a>
+            <a href="#" class="logo">
+                <span>W</span>ahaj
+            </a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#home" class="nav-link active">Home</a></li>
@@ -39,14 +57,18 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div id="particles-js" class="hero-particles"></div>
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+        
         <div class="container">
             <div class="hero-content">
-                <span class="hero-subtitle animate fade-in-up" data-text="DevOps Engineer">DevOps Engineer</span>
-                <h1 class="hero-title animate fade-in-up">Wahaj Ahmed Ansari</h1>
-                <p class="hero-description animate fade-in-up">I build and optimize secure, scalable infrastructure with CI/CD automation, cloud technologies, and containerization solutions.</p>
-                <div class="hero-cta animate fade-in-up">
-                    <a href="#projects" class="btn">View My Work</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                <span class="hero-subtitle" data-text="DevOps Engineer" data-aos="fade-up" data-aos-delay="100">DevOps Engineer</span>
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">Hi, I'm <span class="highlight">Wahaj Ahmed</span> Ansari</h1>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="300">I build and optimize <span class="typed-text"></span> with CI/CD automation, cloud technologies, and containerization solutions.</p>
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#projects" class="btn"><i class="fas fa-code"></i> View My Work</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Contact Me</a>
                 </div>
             </div>
         </div>
@@ -57,45 +79,44 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title animate fade-in-up">About Me</h2>
+            <div class="section-title-container" data-aos="fade-up">
+                <span class="section-subtitle">About Me</span>
+                <h2 class="section-title">Know Me Better</h2>
+                <p class="section-description">Here's a brief introduction about my background and what I do.</p>
+            </div>
+            
             <div class="about-content">
-                <div class="about-text animate fade-in-left">
+                <div class="about-image-container" data-aos="fade-right">
+                    <div class="about-image-bg"></div>
+                    <img src="https://via.placeholder.com/500x600?text=Wahaj+Ahmed" alt="Wahaj Ahmed Ansari" class="about-image tilt-effect">
+                </div>
+                
+                <div class="about-text" data-aos="fade-left">
                     <p>Hello! I'm Wahaj Ahmed Ansari, a results-driven DevOps Engineer with expertise in CI/CD automation, Infrastructure as Code (IaC), and cloud technologies (AWS, Kubernetes).</p>
+                    
                     <p>I have a proven ability to implement secure, scalable solutions and bridge development and operations to achieve 99.9% uptime and 40% faster deployment cycles. I'm passionate about optimizing performance and improving system reliability.</p>
+                    
                     <p>My approach combines technical expertise with a strong focus on collaboration and continuous improvement. I thrive in dynamic environments where I can leverage automation to solve complex infrastructure challenges.</p>
+                    
                     <div class="about-stats">
-                        <div class="stat-item">
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
                             <span class="stat-number" data-count="40" data-suffix="%">0%</span>
                             <span class="stat-title">Faster Deployments</span>
                         </div>
-                        <div class="stat-item">
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
                             <span class="stat-number" data-count="99.9" data-suffix="%">0%</span>
                             <span class="stat-title">Uptime</span>
                         </div>
-                        <div class="stat-item">
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
                             <span class="stat-number" data-count="5" data-suffix="+">0+</span>
                             <span class="stat-title">Projects</span>
                         </div>
-                        <div class="stat-item">
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
                             <span class="stat-number" data-count="2" data-suffix="+">0+</span>
                             <span class="stat-title">Years Experience</span>
                         </div>
-                    </div>
-                </div>
-                <div class="about-image animate fade-in-right">
-                    <!-- You can add an image here if you have one -->
-                    <div class="skill-category">
-                        <h3>What I Do</h3>
-                        <ul>
-                            <li>Design and implement CI/CD pipelines</li>
-                            <li>Automate infrastructure with Terraform & Ansible</li>
-                            <li>Deploy and manage containerized applications</li>
-                            <li>Implement cloud-native solutions on AWS</li>
-                            <li>Monitor and optimize system performance</li>
-                            <li>Ensure security best practices</li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -103,12 +124,17 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <section id="experience" class="section bg-gray">
         <div class="container">
-            <h2 class="section-title animate fade-in-up">Experience</h2>
+            <div class="section-title-container" data-aos="fade-up">
+                <span class="section-subtitle">My Journey</span>
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-description">Here's a timeline of my professional journey and experiences.</p>
+            </div>
+            
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-content animate fade-in-right">
+                    <div class="timeline-content" data-aos="fade-right">
                         <span class="timeline-date">Jan 2025 - Apr 2025</span>
                         <h3 class="timeline-title">DevOps Bootcamp</h3>
                         <p class="timeline-subtitle">Trainwithshubham – Online</p>
@@ -121,8 +147,9 @@
                     </div>
                     <div class="timeline-dot"></div>
                 </div>
+                
                 <div class="timeline-item">
-                    <div class="timeline-content animate fade-in-left">
+                    <div class="timeline-content" data-aos="fade-left">
                         <span class="timeline-date">Oct 2024 - Dec 2024</span>
                         <h3 class="timeline-title">DevOps Intern</h3>
                         <p class="timeline-subtitle">Al-Nafi – Online</p>
@@ -134,15 +161,47 @@
                     <div class="timeline-dot"></div>
                 </div>
             </div>
+            
+            <div class="section-title-container mt-5" data-aos="fade-up">
+                <span class="section-subtitle">Education</span>
+                <h2 class="section-title">Academic Background</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content" data-aos="fade-right">
+                        <span class="timeline-date">Oct 2023 – Present</span>
+                        <h3 class="timeline-title">Diploma in AiOps (Eduqual RQF Level 6)</h3>
+                        <p class="timeline-subtitle">Al-Nafi</p>
+                        <p>Specialized training in AI-driven operations, cloud infrastructure, and automation technologies.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content" data-aos="fade-left">
+                        <span class="timeline-date">Aug 2021 - Aug 2023</span>
+                        <h3 class="timeline-title">Higher Secondary Certificate (Intermediate) in Computer Science</h3>
+                        <p class="timeline-subtitle">The Smart College</p>
+                        <p>Focused on computer science fundamentals, programming, and system design principles.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title animate fade-in-up">Skills</h2>
+            <div class="section-title-container" data-aos="fade-up">
+                <span class="section-subtitle">My Expertise</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-description">Here are the technologies and tools I specialize in.</p>
+            </div>
+            
             <div class="skills-container">
-                <div class="skill-category animate fade-in-up">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
                     <h3>Infrastructure & Cloud</h3>
                     <div class="skill-item">
                         <div class="skill-info">
@@ -172,7 +231,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-category animate fade-in-up">
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
                     <h3>Containerization & Orchestration</h3>
                     <div class="skill-item">
                         <div class="skill-info">
@@ -202,7 +262,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-category animate fade-in-up">
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
                     <h3>CI/CD & Automation</h3>
                     <div class="skill-item">
                         <div class="skill-info">
@@ -232,7 +293,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-category animate fade-in-up">
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
                     <h3>Monitoring & Observability</h3>
                     <div class="skill-item">
                         <div class="skill-info">
@@ -267,27 +329,35 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="section bg-gray">
         <div class="container">
-            <h2 class="section-title animate fade-in-up">Projects</h2>
-            <div class="projects-filter animate fade-in-up">
+            <div class="section-title-container" data-aos="fade-up">
+                <span class="section-subtitle">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">Here are some of my recent projects and accomplishments.</p>
+            </div>
+            
+            <div class="projects-filter" data-aos="fade-up">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="AWS">AWS</button>
                 <button class="filter-btn" data-filter="Kubernetes">Kubernetes</button>
                 <button class="filter-btn" data-filter="CI/CD">CI/CD</button>
                 <button class="filter-btn" data-filter="IaC">Infrastructure</button>
             </div>
+            
             <div class="projects-grid">
-                <div class="project-card animate fade-in-up" data-categories="AWS,Kubernetes,CI/CD,Security">
-                    <img src="https://via.placeholder.com/600x400?text=Banking+App" alt="Banking Application" class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="https://github.com/wahajahmad-cyber/DevOps-mega-project-Banking-App" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
+                <div class="project-card" data-categories="AWS,Kubernetes,CI/CD,Security" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image-container">
+                        <img src="https://via.placeholder.com/600x400?text=Banking+App" alt="Banking Application" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/wahajahmad-cyber/DevOps-mega-project-Banking-App" class="project-link" target="_blank" aria-label="View GitHub Repository">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="project-content">
@@ -303,16 +373,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card animate fade-in-up" data-categories="AWS,IaC">
-                    <img src="https://via.placeholder.com/600x400?text=IaC+Project" alt="IaC Project" class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="https://github.com/wahajahmad-cyber/multi-env-lAC-project" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
+                
+                <div class="project-card" data-categories="AWS,IaC" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image-container">
+                        <img src="https://via.placeholder.com/600x400?text=IaC+Project" alt="IaC Project" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/wahajahmad-cyber/multi-env-lAC-project" class="project-link" target="_blank" aria-label="View GitHub Repository">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="project-content">
@@ -325,16 +398,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card animate fade-in-up" data-categories="AWS,Kubernetes,CI/CD">
-                    <img src="https://via.placeholder.com/600x400?text=E-commerce+App" alt="E-commerce App" class="project-image">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="https://github.com/wahajahmad-cyber/tws-e-commerce-app" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
+                
+                <div class="project-card" data-categories="AWS,Kubernetes,CI/CD" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image-container">
+                        <img src="https://via.placeholder.com/600x400?text=E-commerce+App" alt="E-commerce App" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/wahajahmad-cyber/tws-e-commerce-app" class="project-link" target="_blank" aria-label="View GitHub Repository">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="project-content">
@@ -353,39 +429,17 @@
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="experience">
-        <div class="container">
-            <h2 class="section-title animate fade-in-up">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content animate fade-in-right">
-                        <span class="timeline-date">Oct 2023 – Present</span>
-                        <h3 class="timeline-title">Diploma in AiOps (Eduqual RQF Level 6)</h3>
-                        <p class="timeline-subtitle">Al-Nafi</p>
-                        <p>Specialized training in AI-driven operations, cloud infrastructure, and automation technologies.</p>
-                    </div>
-                    <div class="timeline-dot"></div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content animate fade-in-left">
-                        <span class="timeline-date">Aug 2021 - Aug 2023</span>
-                        <h3 class="timeline-title">Higher Secondary Certificate (Intermediate) in Computer Science</h3>
-                        <p class="timeline-subtitle">The Smart College</p>
-                        <p>Focused on computer science fundamentals, programming, and system design principles.</p>
-                    </div>
-                    <div class="timeline-dot"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="section">
         <div class="container">
-            <h2 class="section-title animate fade-in-up">Contact Me</h2>
+            <div class="section-title-container" data-aos="fade-up">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+                <p class="section-description">Feel free to reach out for collaborations or just a friendly hello.</p>
+            </div>
+            
             <div class="contact-container">
-                <div class="contact-info animate fade-in-left">
+                <div class="contact-info" data-aos="fade-right">
                     <p>I'm always open to discussing new projects, opportunities, or partnerships. Feel free to reach out through any of the following channels:</p>
                     <div class="contact-methods">
                         <div class="contact-item">
@@ -426,7 +480,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form animate fade-in-right">
+                
+                <div class="contact-form" data-aos="fade-left">
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -444,7 +499,7 @@
                             <label for="message">Message</label>
                             <textarea id="message" class="form-control" placeholder="Your Message" rows="5"></textarea>
                         </div>
-                        <button type="submit" class="btn">Send Message</button>
+                        <button type="submit" class="btn w-100"><i class="fas fa-paper-plane"></i> Send Message</button>
                     </form>
                 </div>
             </div>
@@ -458,16 +513,16 @@
                 <h3>Wahaj Ahmed Ansari</h3>
                 <p>DevOps Engineer specializing in CI/CD automation, Infrastructure as Code (IaC), and cloud technologies.</p>
                 <div class="social-links">
-                    <a href="https://github.com/wahajahmad-cyber" class="social-link" target="_blank">
+                    <a href="https://github.com/wahajahmad-cyber" class="social-link" target="_blank" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/wahaj-ahmed-ansari-00b5752b9" class="social-link" target="_blank">
+                    <a href="https://www.linkedin.com/in/wahaj-ahmed-ansari-00b5752b9" class="social-link" target="_blank" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="mailto:wahajahmed263@gmail.com" class="social-link">
+                    <a href="mailto:wahajahmed263@gmail.com" class="social-link" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="tel:+92301-2529273" class="social-link">
+                    <a href="tel:+92301-2529273" class="social-link" aria-label="Phone">
                         <i class="fas fa-phone"></i>
                     </a>
                 </div>
@@ -506,6 +561,10 @@
     </div>
 
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
