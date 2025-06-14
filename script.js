@@ -1,14 +1,5 @@
 // Wait for DOM to fully load
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize progress bars
-    const skillBars = document.querySelectorAll('.progress-bar');
-    skillBars.forEach(bar => {
-        const progress = bar.getAttribute('data-progress');
-        setTimeout(() => {
-            bar.style.width = progress + '%';
-        }, 500);
-    });
-    
     // Mobile menu toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
