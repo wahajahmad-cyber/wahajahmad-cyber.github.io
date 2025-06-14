@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wahaj Ahmed Ansari - DevOps Engineer</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="description" content="Wahaj Ahmed Ansari - DevOps Engineer specializing in CI/CD, AWS, and Kubernetes">
 </head>
 <body>
     <header>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="darkModeToggle">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+            <em><i class="fas fa-moon"></i></em>
+        </div>
         <div class="container">
             <h1>Wahaj Ahmed Ansari</h1>
             <p class="subtitle">DevOps Engineer</p>
@@ -19,7 +26,7 @@
     <nav>
         <div class="container">
             <ul>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about" class="active">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -32,7 +39,7 @@
     <section id="about" class="section">
         <div class="container">
             <h2>About Me</h2>
-            <div class="about-content">
+            <div class="about-content animate-on-scroll">
                 <div class="about-text">
                     <p>Hello! I'm Wahaj Ahmed Ansari, a results-driven DevOps Engineer with expertise in CI/CD automation, Infrastructure as Code (IaC), and cloud technologies (AWS, Kubernetes).</p>
                     <p>I have a proven ability to implement secure, scalable solutions and bridge development and operations to achieve 99.9% uptime and 40% faster deployment cycles. I'm passionate about optimizing performance and improving system reliability.</p>
@@ -41,10 +48,10 @@
         </div>
     </section>
 
-    <section id="experience" class="section">
+    <section id="experience" class="section bg-light">
         <div class="container">
             <h2>Experience</h2>
-            <div class="experience-item">
+            <div class="experience-item animate-on-scroll">
                 <div class="experience-header">
                     <h3>DevOps Intern</h3>
                     <p class="company">Al-Nafi – Online</p>
@@ -55,7 +62,7 @@
                     <li>Orchestrated and provisioned cloud infrastructure using key AWS services, including EC2, S3, VPC, and CloudFormation.</li>
                 </ul>
             </div>
-            <div class="experience-item">
+            <div class="experience-item animate-on-scroll">
                 <div class="experience-header">
                     <h3>DevOps Bootcamp</h3>
                     <p class="company">Trainwithshubham – Online</p>
@@ -71,71 +78,146 @@
         </div>
     </section>
 
-    <section id="skills" class="section bg-light">
+    <section id="skills" class="section">
         <div class="container">
             <h2>Skills</h2>
             <div class="skills-container">
-                <div class="skill-category">
+                <div class="skill-category animate-on-scroll">
                     <h3>Infrastructure & Cloud</h3>
-                    <ul>
-                        <li>AWS (EC2, EKS, S3, CodePipeline, IAM)</li>
-                        <li>Terraform</li>
-                        <li>Ansible</li>
-                    </ul>
+                    <div class="skill-progress">
+                        <div class="skill-header">
+                            <span class="skill-name">AWS</span>
+                            <span class="progress-percentage">0%</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-progress="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-header">
+                            <span class="skill-name">Terraform</span>
+                            <span class="progress-percentage">0%</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-header">
+                            <span class="skill-name">Ansible</span>
+                            <span class="progress-percentage">0%</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-progress="80"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category animate-on-scroll">
                     <h3>Containerization & Orchestration</h3>
-                    <ul>
-                        <li>Docker</li>
-                        <li>Kubernetes</li>
-                        <li>Argo CD</li>
-                    </ul>
+                    <div class="skill-progress">
+                        <div class="skill-header">
+                            <span class="skill-name">Docker</span>
+                            <span class="progress-percentage">0%</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-progress="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-header">
+                            <span class="skill-name">Kubernetes</span>
+                            <span class="progress-percentage">0%</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-header">
+                            <span class="skill-name">Argo CD</span>
+                            <span class="progress-percentage">0%</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-progress="75"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category animate-on-scroll">
                     <h3>CI/CD & Automation</h3>
-                    <ul>
-                        <li>Jenkins</li>
-                        <li>GitHub Actions</li>
-                        <li>AWS CodePipeline</li>
-                        <li>Shell Scripting</li>
-                    </ul>
+                    <div class="skill-progress">
+                        <div class="skill-header">
+                            <span class="skill-name">Jenkins</span>
+                            <span class="progress-percentage">0%</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-progress="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-header">
+                            <span class="skill-name">GitHub Actions</span>
+                            <span class="progress-percentage">0%</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-header">
+                            <span class="skill-name">Shell Scripting</span>
+                            <span class="progress-percentage">0%</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-progress="80"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Security & Compliance</h3>
-                    <ul>
-                        <li>OWASP ZAP</li>
-                        <li>Trivy</li>
-                        <li>AWS Security Groups</li>
-                        <li>HashiCorp Vault</li>
-                        <li>SonarQube</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
+                <div class="skill-category animate-on-scroll">
                     <h3>Monitoring & Observability</h3>
-                    <ul>
-                        <li>Prometheus</li>
-                        <li>Grafana</li>
-                        <li>ELK Stack</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Programming & OS</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>Bash</li>
-                        <li>YAML</li>
-                        <li>Linux (Ubuntu, RHEL)</li>
-                    </ul>
+                    <div class="skill-progress">
+                        <div class="skill-header">
+                            <span class="skill-name">Prometheus</span>
+                            <span class="progress-percentage">0%</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-header">
+                            <span class="skill-name">Grafana</span>
+                            <span class="progress-percentage">0%</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-progress="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-header">
+                            <span class="skill-name">ELK Stack</span>
+                            <span class="progress-percentage">0%</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-progress="75"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="section bg-light">
         <div class="container">
             <h2>Projects</h2>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="AWS">AWS</button>
+                <button class="filter-btn" data-filter="Kubernetes">Kubernetes</button>
+                <button class="filter-btn" data-filter="Jenkins">CI/CD</button>
+                <button class="filter-btn" data-filter="Terraform">IaC</button>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card animate-on-scroll" data-technologies="Jenkins,Terraform,AWS,Kubernetes,Docker,OWASP ZAP,Trivy">
                     <h3>DevSecOps Banking Application on AWS</h3>
                     <p>Integrated security tools within CI/CD pipelines, reducing vulnerabilities by 75% and ensuring compliance. Engineered a secure, multi-tier banking application on AWS EC2 with EKS and Docker.</p>
                     <div class="project-tech">
@@ -147,9 +229,11 @@
                         <span>OWASP ZAP</span>
                         <span>Trivy</span>
                     </div>
-                    <a href="https://github.com/wahajahmad-cyber/DevOps-mega-project-Banking-App" class="btn">View Project</a>
+                    <a href="https://github.com/wahajahmad-cyber/DevOps-mega-project-Banking-App" class="btn" target="_blank">
+                        <i class="fab fa-github"></i> View Project
+                    </a>
                 </div>
-                <div class="project-card">
+                <div class="project-card animate-on-scroll" data-technologies="Terraform,Ansible,AWS">
                     <h3>Multi-Environment Infrastructure as Code (IaC)</h3>
                     <p>Developed a scalable, multi-environment AWS infrastructure (Dev/Staging/Production) using Terraform and Ansible, supporting 3 concurrent application versions.</p>
                     <div class="project-tech">
@@ -157,9 +241,11 @@
                         <span>Ansible</span>
                         <span>AWS</span>
                     </div>
-                    <a href="https://github.com/wahajahmad-cyber/multi-env-lAC-project" class="btn">View Project</a>
+                    <a href="https://github.com/wahajahmad-cyber/multi-env-lAC-project" class="btn" target="_blank">
+                        <i class="fab fa-github"></i> View Project
+                    </a>
                 </div>
-                <div class="project-card">
+                <div class="project-card animate-on-scroll" data-technologies="Jenkins,GitHub,AWS,Kubernetes,Argo CD,Terraform">
                     <h3>EasyShop: Full-Stack E-commerce (CI/CD, Kubernetes)</h3>
                     <p>Built and deployed a scalable e-commerce platform with Next.js 14, MongoDB, and Tailwind CSS. Implemented CI/CD pipelines using Jenkins and GitHub webhooks, reducing deployment time by 70%.</p>
                     <div class="project-tech">
@@ -169,21 +255,23 @@
                         <span>Argo CD</span>
                         <span>Terraform</span>
                     </div>
-                    <a href="https://github.com/wahajahmad-cyber/tws-e-commerce-app" class="btn">View Project</a>
+                    <a href="https://github.com/wahajahmad-cyber/tws-e-commerce-app" class="btn" target="_blank">
+                        <i class="fab fa-github"></i> View Project
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="section bg-light">
+    <section id="education" class="section">
         <div class="container">
             <h2>Education</h2>
-            <div class="education-item">
+            <div class="education-item animate-on-scroll">
                 <h3>Diploma in AiOps (Eduqual RQF Level 6)</h3>
                 <p class="institution">Al-Nafi</p>
                 <p class="date">Oct 2023 – Present</p>
             </div>
-            <div class="education-item">
+            <div class="education-item animate-on-scroll">
                 <h3>Higher Secondary Certificate (Intermediate) in Computer Science</h3>
                 <p class="institution">The Smart College</p>
                 <p class="date">Aug 2021 - Aug 2023</p>
@@ -191,28 +279,47 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section bg-light">
         <div class="container">
             <h2>Contact Me</h2>
-            <div class="contact-info">
-                <p>I'm always open to discussing new projects, opportunities, or partnerships.</p>
-                <div class="contact-methods">
-                    <div class="contact-method">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:wahajahmed263@gmail.com">wahajahmed263@gmail.com</a>
+            <div class="contact-container">
+                <div class="contact-info animate-on-scroll">
+                    <p>I'm always open to discussing new projects, opportunities, or partnerships. Feel free to reach out through any of the following channels:</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:wahajahmed263@gmail.com">wahajahmed263@gmail.com</a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+92301-2529273">+92 301-2529273</a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/wahaj-ahmed-ansari-00b5752b9" target="_blank">LinkedIn</a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/wahajahmad-cyber" target="_blank">GitHub</a>
+                        </div>
                     </div>
-                    <div class="contact-method">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+92301-2529273">+92 301-2529273</a>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/wahaj-ahmed-ansari-00b5752b9" target="_blank">LinkedIn</a>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/wahajahmad-cyber" target="_blank">GitHub</a>
-                    </div>
+                </div>
+                <div class="form-container animate-on-scroll">
+                    <form id="contactForm">
+                        <div class="form-control">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your name">
+                        </div>
+                        <div class="form-control">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your email">
+                        </div>
+                        <div class="form-control">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -220,8 +327,15 @@
 
     <footer>
         <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/wahajahmad-cyber" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/wahaj-ahmed-ansari-00b5752b9" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:wahajahmed263@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
             <p>&copy; 2025 Wahaj Ahmed Ansari. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
