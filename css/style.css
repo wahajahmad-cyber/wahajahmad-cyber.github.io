@@ -5,13 +5,25 @@
 
 /* ===== VARIABLES ===== */
 :root {
-    /* Light Mode Colors */
-    --primary: #2563eb;
-    --primary-light: #3b82f6;
-    --primary-dark: #1d4ed8;
-    --secondary: #10b981;
-    --secondary-light: #34d399;
-    --secondary-dark: #059669;
+    /* Primary Colors - More subtle and professional */
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --primary-dark: #4f46e5;
+    --secondary: #06b6d4;
+    --secondary-light: #22d3ee;
+    --secondary-dark: #0891b2;
+    
+    /* Accent Colors */
+    --accent: #f59e0b;
+    --accent-light: #fbbf24;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    --gradient-subtle: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
     
     /* Light Mode Theme Colors */
     --bg-primary: #ffffff;
@@ -74,15 +86,15 @@
     /* Transitions */
     --transition: all 0.3s ease;
     
-    /* Default Theme Colors (Dark Mode) */
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --bg-tertiary: #334155;
-    --text-primary: #f8fafc;
-    --text-secondary: #e2e8f0;
-    --text-tertiary: #94a3b8;
-    --border-color: #475569;
-    --shadow-color: rgba(0, 0, 0, 0.3);
+    /* Default Theme Colors (Dark Mode) - More sophisticated */
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #2a2a2a;
+    --text-primary: #ffffff;
+    --text-secondary: #d1d5db;
+    --text-tertiary: #9ca3af;
+    --border-color: #374151;
+    --shadow-color: rgba(0, 0, 0, 0.4);
     
     /* Update legacy colors for dark mode default */
     --dark: #f8fafc;
@@ -212,28 +224,61 @@ button {
 }
 
 .btn-primary {
-    background-color: var(--primary);
+    background: var(--gradient-primary);
     color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-dark);
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
 }
 
 .btn-secondary {
     background-color: transparent;
     border: 2px solid var(--primary);
     color: var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--gradient-primary);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.btn-secondary:hover::before {
+    width: 100%;
 }
 
 .btn-secondary:hover {
-    background-color: var(--primary);
     color: white;
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+    transform: translateY(-2px);
 }
 
 .btn-sm {
@@ -259,7 +304,7 @@ button {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(15, 23, 42, 0.9);
+    background-color: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
@@ -269,7 +314,7 @@ button {
 }
 
 [data-theme="light"] .header {
-    background-color: rgba(249, 250, 251, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .navbar {
@@ -395,7 +440,10 @@ button {
     font-size: var(--h3);
     font-weight: 600;
     margin-bottom: var(--space-4);
-    color: var(--primary);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .hero-text p {
@@ -1366,3 +1414,56 @@ p, span, div {
 * {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
+/* ===== IMPROVED VISUAL EFFECTS ===== */
+/* Improved section headers */
+.section-header h2 {
+    position: relative;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+/* Subtle glow effects for interactive elements */
+.project-card:hover,
+.skill-category:hover,
+.highlight-item:hover {
+    box-shadow: 0 10px 30px var(--shadow-color), 0 0 20px rgba(99, 102, 241, 0.1);
+}
+
+/* Better focus states for accessibility */
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Subtle animations for better UX */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-load {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
