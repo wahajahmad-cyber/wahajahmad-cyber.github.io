@@ -530,9 +530,9 @@ button {
 
 /* ===== ABOUT SECTION ===== */
 .about-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: var(--space-8);
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .about-text p {
@@ -1592,4 +1592,45 @@ textarea:focus {
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(88, 166, 255, 0.3);
+}
+/* Social Media Icons in Navigation */
+.social-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-left: var(--space-4);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(88, 166, 255, 0.3);
+}
+
+.social-link i {
+    font-size: 1.1rem;
+}
+
+/* Responsive navigation adjustments */
+@media (max-width: 768px) {
+    .social-nav {
+        margin-left: 0;
+        margin-top: var(--space-4);
+        justify-content: center;
+    }
 }
