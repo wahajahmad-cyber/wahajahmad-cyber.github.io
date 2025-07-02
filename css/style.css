@@ -5,25 +5,35 @@
 
 /* ===== VARIABLES ===== */
 :root {
-    /* Primary Colors - More subtle and professional */
-    --primary: #6366f1;
-    --primary-light: #818cf8;
-    --primary-dark: #4f46e5;
-    --secondary: #06b6d4;
-    --secondary-light: #22d3ee;
-    --secondary-dark: #0891b2;
+    /* Primary Colors - Inspired by modern dark themes */
+    --primary: #58a6ff;
+    --primary-light: #79c0ff;
+    --primary-dark: #388bfd;
+    --secondary: #56d364;
+    --secondary-light: #7ee787;
+    --secondary-dark: #3fb950;
     
     /* Accent Colors */
-    --accent: #f59e0b;
-    --accent-light: #fbbf24;
-    --success: #10b981;
-    --warning: #f59e0b;
-    --error: #ef4444;
+    --accent: #f78166;
+    --accent-light: #ffa198;
+    --success: #56d364;
+    --warning: #d29922;
+    --error: #f85149;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     --gradient-accent: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
     --gradient-subtle: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+    
+    /* Dark Theme Colors (Default and Only Theme) */
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-tertiary: #21262d;
+    --text-primary: #f0f6fc;
+    --text-secondary: #c9d1d9;
+    --text-tertiary: #8b949e;
+    --border-color: #30363d;
+    --shadow-color: rgba(0, 0, 0, 0.6);
     
     /* Light Mode Theme Colors */
     --bg-primary: #ffffff;
@@ -86,43 +96,13 @@
     /* Transitions */
     --transition: all 0.3s ease;
     
-    /* Default Theme Colors (Dark Mode) - More sophisticated */
-    --bg-primary: #0a0a0a;
-    --bg-secondary: #1a1a1a;
-    --bg-tertiary: #2a2a2a;
-    --text-primary: #ffffff;
-    --text-secondary: #d1d5db;
-    --text-tertiary: #9ca3af;
-    --border-color: #374151;
-    --shadow-color: rgba(0, 0, 0, 0.4);
-    
-    /* Update legacy colors for dark mode default */
-    --dark: #f8fafc;
-    --light: #0f172a;
-    --light-dark: #1e293b;
-    --gray: #94a3b8;
-    --gray-light: #64748b;
-    --gray-dark: #cbd5e1;
-}
-
-/* Light Mode Theme Variables */
-[data-theme="light"] {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f9fafb;
-    --bg-tertiary: #f3f4f6;
-    --text-primary: #111827;
-    --text-secondary: #374151;
-    --text-tertiary: #6b7280;
-    --border-color: #e5e7eb;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    
-    /* Update legacy colors for light mode */
-    --dark: #111827;
-    --light: #f9fafb;
-    --light-dark: #f3f4f6;
-    --gray: #6b7280;
-    --gray-light: #9ca3af;
-    --gray-dark: #4b5563;
+    /* Legacy colors for compatibility */
+    --dark: #f0f6fc;
+    --light: #0d1117;
+    --light-dark: #161b22;
+    --gray: #8b949e;
+    --gray-light: #6e7681;
+    --gray-dark: #c9d1d9;
 }
 
 /* ===== RESET & BASE STYLES ===== */
@@ -248,7 +228,7 @@ button {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 25px rgba(88, 166, 255, 0.3);
 }
 
 .btn-secondary {
@@ -304,7 +284,7 @@ button {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(10, 10, 10, 0.95);
+    background-color: rgba(13, 17, 23, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
@@ -313,9 +293,6 @@ button {
     border-bottom: 1px solid var(--border-color);
 }
 
-[data-theme="light"] .header {
-    background-color: rgba(255, 255, 255, 0.95);
-}
 
 .navbar {
     display: flex;
@@ -381,32 +358,7 @@ button {
     background-color: var(--text-primary);
 }
 
-/* Theme Toggle Button */
-.theme-toggle {
-    background: none;
-    border: 2px solid var(--border-color);
-    border-radius: var(--radius-full);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: var(--transition);
-    color: var(--text-primary);
-    margin-left: var(--space-4);
-}
 
-.theme-toggle:hover {
-    background-color: var(--bg-secondary);
-    border-color: var(--primary);
-    color: var(--primary);
-    transform: scale(1.05);
-}
-
-.theme-toggle i {
-    font-size: 1.1rem;
-}
 
 /* ===== HERO SECTION ===== */
 .hero {
@@ -1436,7 +1388,7 @@ p, span, div {
 .project-card:hover,
 .skill-category:hover,
 .highlight-item:hover {
-    box-shadow: 0 10px 30px var(--shadow-color), 0 0 20px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 10px 30px var(--shadow-color), 0 0 20px rgba(88, 166, 255, 0.1);
 }
 
 /* Better focus states for accessibility */

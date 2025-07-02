@@ -10,16 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        // Apply theme immediately to prevent flash
-        (function() {
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-            document.body.setAttribute('data-theme', savedTheme);
-        })();
-    </script>
 </head>
-<body data-theme="dark">
+<body>
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -34,9 +26,6 @@
                         <li><a href="#skills" class="nav-link">Skills</a></li>
                         <li><a href="#contact" class="nav-link">Contact</a></li>
                         <li><a href="Wahaj-Resume.pdf" class="nav-link btn-resume" target="_blank">Resume</a></li>
-                        <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                            <i class="fas fa-sun" id="theme-icon"></i>
-                        </button></li>
                     </ul>
                 </div>
                 <div class="hamburger">

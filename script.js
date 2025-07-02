@@ -181,34 +181,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Theme Toggle Functionality
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
-    const body = document.body;
-    
-    // Set default theme to dark
-    function setTheme(theme) {
-        if (theme === 'light') {
-            body.setAttribute('data-theme', 'light');
-            themeIcon.className = 'fas fa-moon';
-            localStorage.setItem('theme', 'light');
-        } else {
-            body.setAttribute('data-theme', 'dark');
-            themeIcon.className = 'fas fa-sun';
-            localStorage.setItem('theme', 'dark');
-        }
-    }
-    
-    // Initialize theme - default to dark mode
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    setTheme(savedTheme);
-    
-    // Theme toggle event listener
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function() {
-            const currentTheme = body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            setTheme(newTheme);
-        });
-    }
+
 });
