@@ -394,6 +394,9 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: var(--space-4);
 }
 
 .profile-photo {
@@ -405,6 +408,8 @@ button {
     border: 4px solid var(--primary);
     box-shadow: 0 20px 40px rgba(88, 166, 255, 0.3);
     transition: all 0.3s ease;
+    margin: 0 auto;
+    display: block;
 }
 
 .profile-photo:hover {
@@ -416,7 +421,9 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center center;
+    display: block;
+    margin: 0 auto;
 }
 
 .photo-placeholder {
@@ -1505,11 +1512,17 @@ textarea:focus {
     
     .hero-image {
         order: -1;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        display: flex;
     }
     
     .profile-photo {
         width: 280px;
         height: 280px;
+        margin: 0 auto;
+        display: block;
     }
     
     .hero-text {
