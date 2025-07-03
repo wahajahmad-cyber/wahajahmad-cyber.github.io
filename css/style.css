@@ -361,12 +361,11 @@ button {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f1419 100%);
+    background: #0a0a0a;
     overflow: hidden;
-    text-align: center;
 }
 
-/* Network/Plexus Background */
+/* Remove old network background styles */
 .stars-container {
     position: absolute;
     top: 0;
@@ -385,57 +384,6 @@ button {
     pointer-events: none;
 }
 
-/* Network Dots */
-.floating-elements::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        radial-gradient(2px 2px at 100px 50px, rgba(88, 166, 255, 0.8), transparent),
-        radial-gradient(2px 2px at 200px 150px, rgba(0, 255, 127, 0.6), transparent),
-        radial-gradient(1px 1px at 300px 100px, rgba(88, 166, 255, 0.7), transparent),
-        radial-gradient(2px 2px at 400px 200px, rgba(0, 255, 127, 0.5), transparent),
-        radial-gradient(1px 1px at 150px 250px, rgba(88, 166, 255, 0.6), transparent),
-        radial-gradient(2px 2px at 350px 50px, rgba(0, 255, 127, 0.7), transparent),
-        radial-gradient(1px 1px at 50px 150px, rgba(88, 166, 255, 0.5), transparent),
-        radial-gradient(2px 2px at 250px 300px, rgba(0, 255, 127, 0.6), transparent),
-        radial-gradient(1px 1px at 450px 120px, rgba(88, 166, 255, 0.8), transparent),
-        radial-gradient(2px 2px at 120px 350px, rgba(0, 255, 127, 0.5), transparent);
-    background-size: 500px 400px;
-    background-repeat: repeat;
-    animation: networkFloat 20s linear infinite;
-}
-
-/* Network Lines */
-.floating-elements::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        linear-gradient(45deg, transparent 48%, rgba(88, 166, 255, 0.2) 49%, rgba(88, 166, 255, 0.2) 51%, transparent 52%),
-        linear-gradient(-45deg, transparent 48%, rgba(0, 255, 127, 0.15) 49%, rgba(0, 255, 127, 0.15) 51%, transparent 52%),
-        linear-gradient(30deg, transparent 48%, rgba(88, 166, 255, 0.1) 49%, rgba(88, 166, 255, 0.1) 51%, transparent 52%),
-        linear-gradient(-30deg, transparent 48%, rgba(0, 255, 127, 0.1) 49%, rgba(0, 255, 127, 0.1) 51%, transparent 52%);
-    background-size: 200px 200px, 250px 250px, 300px 300px, 180px 180px;
-    background-position: 0 0, 50px 50px, 100px 100px, 25px 25px;
-    animation: networkLines 25s linear infinite reverse;
-}
-
-@keyframes networkFloat {
-    0% { transform: translateX(0) translateY(0); }
-    25% { transform: translateX(-20px) translateY(-10px); }
-    50% { transform: translateX(20px) translateY(10px); }
-    75% { transform: translateX(-10px) translateY(20px); }
-    100% { transform: translateX(0) translateY(0); }
-}
-
-@keyframes networkLines {
-    0% { transform: translateX(0) translateY(0) rotate(0deg); }
-    100% { transform: translateX(-100px) translateY(-100px) rotate(360deg); }
-}
-
 .hero::before {
     content: '';
     position: absolute;
@@ -443,17 +391,8 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        radial-gradient(ellipse at center, rgba(88, 166, 255, 0.1) 0%, transparent 70%),
-        radial-gradient(ellipse at 20% 80%, rgba(0, 255, 127, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(88, 166, 255, 0.06) 0%, transparent 50%);
+    background: radial-gradient(ellipse at center, rgba(88, 166, 255, 0.03) 0%, transparent 70%);
     pointer-events: none;
-    animation: pulse 6s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.7; }
-    50% { opacity: 1; }
 }
 
 .hero-content {
@@ -462,7 +401,7 @@ button {
     gap: var(--space-16);
     align-items: center;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -487,40 +426,20 @@ button {
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-    border: 4px solid rgba(88, 166, 255, 0.6);
+    border: 3px solid rgba(88, 166, 255, 0.6);
     box-shadow: 
-        0 0 30px rgba(88, 166, 255, 0.4),
-        0 0 60px rgba(0, 255, 127, 0.2),
-        inset 0 0 30px rgba(255, 255, 255, 0.1);
+        0 0 20px rgba(88, 166, 255, 0.3),
+        0 0 40px rgba(0, 255, 127, 0.2);
     transition: all 0.3s ease;
     margin: 0 auto;
     display: block;
-    animation: profileGlow 4s ease-in-out infinite;
-}
-
-@keyframes profileGlow {
-    0%, 100% { 
-        box-shadow: 
-            0 0 30px rgba(88, 166, 255, 0.4),
-            0 0 60px rgba(0, 255, 127, 0.2),
-            inset 0 0 30px rgba(255, 255, 255, 0.1);
-        border-color: rgba(88, 166, 255, 0.6);
-    }
-    50% { 
-        box-shadow: 
-            0 0 40px rgba(88, 166, 255, 0.6),
-            0 0 80px rgba(0, 255, 127, 0.3),
-            inset 0 0 40px rgba(255, 255, 255, 0.2);
-        border-color: rgba(0, 255, 127, 0.8);
-    }
 }
 
 .profile-photo:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 
-        0 0 50px rgba(88, 166, 255, 0.6),
-        0 0 100px rgba(0, 255, 127, 0.4),
-        inset 0 0 50px rgba(255, 255, 255, 0.2);
+        0 0 30px rgba(88, 166, 255, 0.4),
+        0 0 60px rgba(0, 255, 127, 0.3);
 }
 
 .profile-photo img {
