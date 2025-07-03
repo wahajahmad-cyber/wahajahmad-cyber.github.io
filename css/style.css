@@ -359,10 +359,66 @@ button {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
-    padding: var(--space-20) 0;
+    background: #000;
     overflow: hidden;
-    background: var(--bg-primary);
+    text-align: center;
+}
+
+/* Starfield Background */
+.stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.stars, .stars2, .stars3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,1), transparent),
+        radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,1), transparent),
+        radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: move-twink-back 200s linear infinite;
+}
+
+.stars2 {
+    background-image: 
+        radial-gradient(1px 1px at 40px 60px, #fff, transparent),
+        radial-gradient(1px 1px at 120px 10px, rgba(255,255,255,1), transparent),
+        radial-gradient(1px 1px at 160px 70px, #fff, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: move-twink-back 100s linear infinite;
+}
+
+.stars3 {
+    background-image: 
+        radial-gradient(1px 1px at 10px 10px, #fff, transparent),
+        radial-gradient(1px 1px at 150px 60px, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 60px 80px, #fff, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: move-twink-back 150s linear infinite;
+}
+
+@keyframes move-twink-back {
+    from {transform: translateY(0px);}
+    to {transform: translateY(-2000px);}
 }
 
 .hero::before {
@@ -372,22 +428,25 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at center, rgba(88, 166, 255, 0.08) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
     pointer-events: none;
 }
 
 .hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-16);
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: var(--space-8);
     position: relative;
     z-index: 1;
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .hero-text {
-    max-width: 600px;
+    text-align: center;
+    color: #fff;
 }
 
 .hero-image {
@@ -395,18 +454,20 @@ button {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
-    padding: var(--space-4);
+    margin-bottom: var(--space-6);
 }
 
 .profile-photo {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-    border: 4px solid var(--primary);
-    box-shadow: 0 20px 40px rgba(88, 166, 255, 0.3);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 0 30px rgba(255, 255, 255, 0.3),
+        0 0 60px rgba(255, 255, 255, 0.1),
+        inset 0 0 30px rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     margin: 0 auto;
     display: block;
@@ -414,7 +475,10 @@ button {
 
 .profile-photo:hover {
     transform: scale(1.05);
-    box-shadow: 0 25px 50px rgba(88, 166, 255, 0.4);
+    box-shadow: 
+        0 0 40px rgba(255, 255, 255, 0.4),
+        0 0 80px rgba(255, 255, 255, 0.2),
+        inset 0 0 40px rgba(255, 255, 255, 0.2);
 }
 
 .profile-photo img {
@@ -423,6 +487,38 @@ button {
     object-fit: cover;
     object-position: center center;
     display: block;
+    margin: 0 auto;
+}
+
+.greeting {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--space-2);
+    font-weight: 300;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--space-8);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.hero-cta {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
     margin: 0 auto;
 }
 
@@ -1505,8 +1601,8 @@ textarea:focus {
 /* Responsive Hero Section */
 @media (max-width: 768px) {
     .hero-content {
-        grid-template-columns: 1fr;
-        gap: var(--space-12);
+        flex-direction: column;
+        gap: var(--space-8);
         text-align: center;
     }
     
@@ -1519,10 +1615,18 @@ textarea:focus {
     }
     
     .profile-photo {
-        width: 280px;
-        height: 280px;
+        width: 250px;
+        height: 250px;
         margin: 0 auto;
         display: block;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.2rem;
     }
     
     .hero-text {
@@ -1531,6 +1635,8 @@ textarea:focus {
     
     .hero-cta {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 }
 /* Modern Button Styles */
