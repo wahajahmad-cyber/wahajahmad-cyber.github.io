@@ -361,12 +361,12 @@ button {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: #000;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
     overflow: hidden;
     text-align: center;
 }
 
-/* Starfield Background */
+/* Animated Background Elements */
 .stars-container {
     position: absolute;
     top: 0;
@@ -376,49 +376,37 @@ button {
     overflow: hidden;
 }
 
-.stars, .stars2, .stars3 {
+.stars-container::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 118, 117, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(88, 166, 255, 0.2) 0%, transparent 50%);
+    animation: float 6s ease-in-out infinite;
 }
 
-.stars {
-    background-image: 
-        radial-gradient(2px 2px at 20px 30px, #eee, transparent),
-        radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,1), transparent),
-        radial-gradient(1px 1px at 90px 40px, #fff, transparent),
-        radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,1), transparent),
-        radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
-    background-repeat: repeat;
-    background-size: 200px 100px;
-    animation: move-twink-back 200s linear infinite;
+.stars-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
+    animation: float 8s ease-in-out infinite reverse;
 }
 
-.stars2 {
-    background-image: 
-        radial-gradient(1px 1px at 40px 60px, #fff, transparent),
-        radial-gradient(1px 1px at 120px 10px, rgba(255,255,255,1), transparent),
-        radial-gradient(1px 1px at 160px 70px, #fff, transparent);
-    background-repeat: repeat;
-    background-size: 200px 100px;
-    animation: move-twink-back 100s linear infinite;
-}
-
-.stars3 {
-    background-image: 
-        radial-gradient(1px 1px at 10px 10px, #fff, transparent),
-        radial-gradient(1px 1px at 150px 60px, rgba(255,255,255,0.5), transparent),
-        radial-gradient(1px 1px at 60px 80px, #fff, transparent);
-    background-repeat: repeat;
-    background-size: 200px 100px;
-    animation: move-twink-back 150s linear infinite;
-}
-
-@keyframes move-twink-back {
-    from {transform: translateY(0px);}
-    to {transform: translateY(-2000px);}
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(1deg); }
+    66% { transform: translateY(10px) rotate(-1deg); }
 }
 
 .hero::before {
@@ -428,8 +416,16 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    background: 
+        radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%),
+        linear-gradient(45deg, transparent 30%, rgba(88, 166, 255, 0.05) 50%, transparent 70%);
     pointer-events: none;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.8; }
 }
 
 .hero-content {
@@ -463,22 +459,38 @@ button {
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-    border: 4px solid rgba(255, 255, 255, 0.2);
+    border: 4px solid rgba(88, 166, 255, 0.5);
     box-shadow: 
-        0 0 30px rgba(255, 255, 255, 0.3),
-        0 0 60px rgba(255, 255, 255, 0.1),
+        0 0 30px rgba(88, 166, 255, 0.4),
+        0 0 60px rgba(88, 166, 255, 0.2),
         inset 0 0 30px rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     margin: 0 auto;
     display: block;
+    animation: profileGlow 3s ease-in-out infinite;
+}
+
+@keyframes profileGlow {
+    0%, 100% { 
+        box-shadow: 
+            0 0 30px rgba(88, 166, 255, 0.4),
+            0 0 60px rgba(88, 166, 255, 0.2),
+            inset 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+    50% { 
+        box-shadow: 
+            0 0 40px rgba(88, 166, 255, 0.6),
+            0 0 80px rgba(88, 166, 255, 0.3),
+            inset 0 0 40px rgba(255, 255, 255, 0.2);
+    }
 }
 
 .profile-photo:hover {
     transform: scale(1.05);
     box-shadow: 
-        0 0 40px rgba(255, 255, 255, 0.4),
-        0 0 80px rgba(255, 255, 255, 0.2),
-        inset 0 0 40px rgba(255, 255, 255, 0.2);
+        0 0 50px rgba(88, 166, 255, 0.6),
+        0 0 100px rgba(88, 166, 255, 0.4),
+        inset 0 0 50px rgba(255, 255, 255, 0.2);
 }
 
 .profile-photo img {
@@ -502,7 +514,11 @@ button {
     font-weight: 700;
     margin-bottom: var(--space-2);
     color: #fff;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+    background: linear-gradient(135deg, #fff 0%, #58a6ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .hero h2 {
@@ -510,7 +526,7 @@ button {
     font-weight: 400;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: var(--space-8);
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .hero-cta {
@@ -518,6 +534,69 @@ button {
     gap: var(--space-4);
     justify-content: center;
     flex-wrap: wrap;
+}
+
+/* Floating Geometric Elements */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-circle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(88, 166, 255, 0.3);
+    border-radius: 50%;
+    top: 20%;
+    left: 10%;
+    animation: floatUpDown 6s ease-in-out infinite;
+}
+
+.floating-square {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(255, 118, 117, 0.3);
+    top: 60%;
+    right: 15%;
+    animation: floatUpDown 8s ease-in-out infinite reverse;
+    transform: rotate(45deg);
+}
+
+.floating-triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 43px solid rgba(120, 119, 198, 0.3);
+    top: 30%;
+    right: 20%;
+    animation: floatUpDown 7s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.3;
+    }
+    25% { 
+        transform: translateY(-20px) rotate(90deg);
+        opacity: 0.6;
+    }
+    50% { 
+        transform: translateY(10px) rotate(180deg);
+        opacity: 0.4;
+    }
+    75% { 
+        transform: translateY(-15px) rotate(270deg);
+        opacity: 0.7;
+    }
 }
     margin: 0 auto;
 }
