@@ -15,12 +15,12 @@ const About = () => {
         </div>
         <div className="about-right">
           <div className="about-para">
-            <p>I am Suraj Mallick, a Cloud Engineer specializing in designing, deploying, and optimizing cloud infrastructure. With expertise in AWS cloud services and DevOps automation, I focus on building scalable, secure, and cost-efficient solutions.</p>
+            <p>I’m Wahaj Ahmed, a passionate Cloud & DevOps Engineer in the making, with a strong foundation in AWS services and DevOps practices. I specialize in learning and building cloud infrastructure using Infrastructure as Code, automation tools, and CI/CD pipelines to create scalable, secure, and efficient environments.</p>
             
             <div className="key-highlights">
-              <p>-Cloud Architecture & Infrastructure as Code (IaC): Designing resilient cloud environments using Terraform and CloudFormation.</p>
+              <p>-I've completed multiple Bootcamps and hands-on projects, including automated deployments on AWS using Kubernetes and Argo CD, as well as CI/CD integration using Jenkins. My mission is to bridge the gap between development and operations through automation and scalability.</p>
               <br />
-              <p>-DevOps & Automation: Implementing CI/CD pipelines, configuration management, and container orchestration with Docker and Kubernetes.</p>
+              <p>-Beyond the terminal and YAML files, I love writing LinkedIn posts, learning from real-world DevOps scenarios, and connecting with like-minded tech enthusiasts. I'm continuously evolving in my DevOps journey and always excited to take on new challenges!</p>
               <br />
               <p>-Cloud Security & Cost Optimization: Enforcing security best practices, monitoring cloud environments, and optimizing resource utilization.</p>
             </div>
