@@ -1,37 +1,52 @@
-# DevOps Engineer Portfolio
+# Portfolio Website (React + Vite)
 
-This repository contains my professional portfolio as a DevOps Engineer, showcasing my skills, projects, and experience.
+This is a **personal portfolio website** built using **React** and **Vite**. The site showcases projects, skills, and experience in an interactive and responsive way.
 
 ## Features
+- **Fast and lightweight** with Vite
+- **Responsive design** for all devices
+- **Modern UI** using React components
+- **Easy to deploy** (Netlify, Vercel, etc.)
 
-- Responsive design
-- Project showcase
-- Skills and expertise
-- Contact information
+## Installation & Setup
 
-## Technologies Used
+### 1. Clone the repository
+```sh
+git clone https://github.com/yonlysuraj/portfolio-website-react.git
+cd portfolio-website-react
+```
 
-- HTML5
-- CSS3
-- GitHub Pages for hosting
+### 2. Install dependencies
+```sh
+npm install
+```
 
-## Setup for GitHub Pages
+### 3. Run the development server
+```sh
+npm run dev
+```
 
-1. Create a new repository named `yourusername.github.io`
-2. Clone the repository to your local machine
-3. Add these files to the repository
-4. Push to GitHub
-5. Your site will be available at `https://yourusername.github.io`
+### 4. Build for production
+```sh
+npm run build
+```
 
-## Customization
+### 5. Deploy
+You can deploy the site on **Netlify**, **Vercel**, or any static hosting platform. If using **Netlify**, simply connect the repo and Netlify will detect the setup.
 
-Feel free to customize this portfolio by:
+## Project Structure
+```
+portfolio-website-react/
+├── src/             # React components and assets
+├── public/          # Static files
+├── package.json     # Dependencies and scripts
+├── vite.config.js   # Vite configuration
+└── README.md        # Project documentation
+```
 
-- Updating the personal information
-- Adding your own projects
-- Modifying the color scheme in the CSS
-- Adding additional sections as needed
+## Contributing
+Feel free to fork and customize the project! If you find any issues, open a pull request or report them.
 
 ## License
+This project is licensed under the MIT License.
 
-This project is open source and available under the [MIT License](LICENSE).
