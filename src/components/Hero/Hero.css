@@ -164,6 +164,12 @@
     transform: translateY(-3px);
 }
 
+.hero-social a[href*="t.me"]:hover {
+    color: #24A1DE;
+    filter: drop-shadow(0 0 8px rgba(36, 161, 222, 0.8));
+    transform: translateY(-3px);
+}
+
 /* Update the Twitter/X hover selector for web view */
 .hero-social a[href*="x.com"]:hover {
     color: #fff;
