@@ -23,7 +23,7 @@ const About = () => {
               <p>-Beyond the terminal and YAML files, I love writing LinkedIn posts, learning from real-world DevOps scenarios, and connecting with like-minded tech enthusiasts. I'm continuously evolving in my DevOps journey and always excited to take on new challenges.</p>
             </div>
 
-            <p>Driven by a strong curiosity for cloud infrastructure, I actively explore new technologies and practices that enhance scalability and resilience. I’m especially passionate about solving complex infrastructure problems, streamlining operations through automation, and delivering reliable systems that scale.</p>
+            <p>Curious about cloud infrastructure, I explore new technologies to boost scalability and resilience. I'm passionate about solving infrastructure challenges, automating operations, and building reliable, scalable systems.</p>
           </div>
         </div>
       </div>
