@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import './Hero.css'
 import pfp from '../../assets/pfp.jpg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
@@ -75,12 +75,12 @@ const Hero = () => {
       <img src={pfp} alt="" />
       <div className="hero-content">
         <h1>
-          <span>Hey! I'm Suraj Mallick,</span><br/>
+          <span>Hey! I&apos;m Suraj Mallick,</span><br/>
           a Cloud Engineer
         </h1>
         <TypeAnimation
           sequence={[
-            'Im a Cloud Engineer in Odisha, I have skills that might help you to grow your company',
+            'I&apos;m a Cloud Engineer in Odisha, I have skills that might help you to grow your company',
             1000,
             'I build cloud infrastructure',
             1000,

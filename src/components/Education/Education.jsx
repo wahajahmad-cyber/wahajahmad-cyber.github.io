@@ -1,4 +1,3 @@
-import React from 'react'
 import './Education.css'
 import siliconUni from '../../assets/silicon-uni.jpg'
 import davSchool from '../../assets/dav-school.jpg'

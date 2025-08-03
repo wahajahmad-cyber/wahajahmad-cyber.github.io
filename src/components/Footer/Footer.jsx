@@ -1,5 +1,3 @@
-import React from 'react'
-import footer_logo from '../../assets/footer_logo.svg'
 import user_icon from '../../assets/user_icon.svg'
 import './Footer.css'
 const Footer = () => {
@@ -9,7 +7,7 @@ const Footer = () => {
         <div className="footer-top">
           <div className="footer-top-left">
               <h1>dev.Suraj</h1>
-              <p>I'm a Developer here to learn</p>
+              <p>I&apos;m a Developer here to learn</p>
           </div>
           <div className="footer-top-right">
               <div className="footer-email-input">

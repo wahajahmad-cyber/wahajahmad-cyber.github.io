@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./Services.css";
 import theme_pattern from "../../assets/theme_pattern.svg";
 import ServicesData from "../../assets/services_data";

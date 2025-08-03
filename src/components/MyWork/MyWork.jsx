@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import './MyWork.css'
-import theme_pattern from '../../assets/theme_pattern.svg'
 import arrow_icon from '../../assets/arrow_icon.svg'
 
 const MyWork = () => {

@@ -1,4 +1,3 @@
-import React from 'react'
 import './Contact.css'
 import theme_pattern from '../../assets/theme_pattern.svg'
 import mail_icon from '../../assets/mail_icon.svg'
@@ -37,8 +36,8 @@ const Contact = () => {
         </div>
       <div className="contact-section">
         <div className="contact-left">
-            <h1>Let's Talk</h1>
-            <p>Im currently available to take on new project,so feel free to Contact Me</p>
+            <h1>Let&apos;s Talk</h1>
+            <p>I&apos;m currently available to take on new project,so feel free to Contact Me</p>
             <div className="contact-details">
                 <div className="detail">
                     <img src={mail_icon} alt="" /><p>mail4suraj2002@gmail.com</p>
