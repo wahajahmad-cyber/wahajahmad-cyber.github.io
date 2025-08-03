@@ -80,9 +80,9 @@ const Hero = () => {
         </h1>
         <TypeAnimation
           sequence={[
-            "I'm a Cloud Engineer, I have skills that might help you to grow your company",
+            "I'm a DevOps Engineer, I have skills that might help you to grow your company",
             1000,
-            'I build Cloud Infrastructure',
+            'I build Cloud/DevOps Infrastructure',
             1000,
             'I create scalable solutions',
             1000,
