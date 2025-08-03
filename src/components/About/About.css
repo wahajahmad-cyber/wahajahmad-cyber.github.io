@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     gap: 80px;  /* Increased from 50px */
-    margin: 50px auto; /* Increased from 60px */
+    margin: 100px auto; /* Increased from 60px */
     max-width: 1200px; /* Added max-width to match Services */
     padding: 0 40px; /* Added padding instead of large margins */
     margin-bottom: 0%;
