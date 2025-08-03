@@ -4,7 +4,7 @@ import pfp from '../../assets/pfp.jpg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { TypeAnimation } from 'react-type-animation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin, faInstagram, faDiscord, faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faInstagram, faDiscord, faXTwitter, faTelegram } from '@fortawesome/free-brands-svg-icons'
 import Resume from '../../assets/Wahaj-Resume.pdf'
 
 const Hero = () => {
@@ -109,20 +109,20 @@ const Hero = () => {
           </a>
         </div>
         <div className="hero-social">
-          <a href="" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faXTwitter} />
-          </a>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/wahaj-ahmed-ansari-00b5752b9" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/wahajahmad-cyber" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/meetwahaj" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="https://discord.com/users/920959349004853288" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faDiscord} />
+          </a>
+          <a href="http://t.me/wahaj_aa" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faTelegram} />
           </a>
         </div>
       </div>
