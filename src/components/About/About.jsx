@@ -15,7 +15,7 @@ const About = () => {
         </div>
         <div className="about-right">
           <div className="about-para">
-            <p>I’m Wahaj Ahmed, a passionate Cloud & DevOps Engineer in the making, with a strong foundation in AWS services and DevOps practices. I specialize in learning and building cloud infrastructure using Infrastructure as Code, automation tools, and CI/CD pipelines to create scalable, secure, and efficient environments.</p>
+            <p>I’m Wahaj Ahmed, a passionate Cloud & DevOps Engineer in the making, with a strong foundation in AWS services and DevOps practices. I focus on learning and building cloud infrastructure using IaC, automation tools, and CI/CD for scalable, secure, and efficient environments.</p>
             
             <div className="key-highlights">
               <p>-I've completed multiple Bootcamps and hands-on projects, including automated deployments on AWS using Kubernetes and Argo CD, as well as CI/CD integration using Jenkins. My mission is to bridge the gap between development and operations through automation and scalability.</p>
