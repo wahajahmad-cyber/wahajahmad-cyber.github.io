@@ -121,7 +121,7 @@ const Hero = () => {
           <a href="https://discord.com/users/920959349004853288" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faDiscord} />
           </a>
-          <a href="http://t.me/wahaj_aa" target="_blank" rel="noopener noreferrer">
+          <a href="https://t.me/wahaj_aa" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faTelegram} />
           </a>
         </div>
