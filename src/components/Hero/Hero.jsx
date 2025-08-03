@@ -75,14 +75,14 @@ const Hero = () => {
       <img src={pfp} alt="" />
       <div className="hero-content">
         <h1>
-          <span>Hey! I&apos;m Suraj Mallick,</span><br/>
-          a Cloud Engineer
+          <span>Hey! I&apos;m Wahaj Ahmed,</span><br/>
+          a DevOps Engineer
         </h1>
         <TypeAnimation
           sequence={[
-            'I&apos;m a Cloud Engineer in Odisha, I have skills that might help you to grow your company',
+            "I'm a Cloud Engineer, I have skills that might help you to grow your company",
             1000,
-            'I build cloud infrastructure',
+            'I build Cloud Infrastructure',
             1000,
             'I create scalable solutions',
             1000,
@@ -98,30 +98,30 @@ const Hero = () => {
           </div>
           <a 
             href={Resume} 
-            download="SurajMallick_Resume.pdf"
+            download="Wahaj-Resume.pdf"
             className="hero-resume"
             style={{ textDecoration: 'none' }}
             target="_blank"
             rel="noopener noreferrer"
             type="application/pdf"
           >
-            My resume
+            My Resume
           </a>
         </div>
         <div className="hero-social">
-          <a href="https://x.com/y_onlysuraj" target="_blank" rel="noopener noreferrer">
+          <a href="" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faXTwitter} />
           </a>
-          <a href="https://www.linkedin.com/in/suraj-mallick-ez/" target="_blank" rel="noopener noreferrer">
+          <a href="" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href="https://github.com/yonlysuraj" target="_blank" rel="noopener noreferrer">
+          <a href="" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="https://www.instagram.com/itzsurazzz/" target="_blank" rel="noopener noreferrer">
+          <a href="" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href="https://discord.com/users/surajuwu" target="_blank" rel="noopener noreferrer">
+          <a href="" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faDiscord} />
           </a>
         </div>
