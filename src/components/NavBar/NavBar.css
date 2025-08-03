@@ -29,7 +29,7 @@
     transition: transform 0.3s ease;
     flex-shrink: 0; /* Prevent logo from shrinking */
     margin-right: 0; /* Remove auto margin */
-    margin-left: -20px; /* Move name to the left */
+    margin-left: -50px; /* Move name to the left */
     position: relative;
     z-index: 2;  /* Keep logo above particles */
 }
