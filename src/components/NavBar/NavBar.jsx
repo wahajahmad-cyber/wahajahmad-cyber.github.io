@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav className='navbar'>
-      <h1>dev.<span>Suraj</span></h1>
+      <h1>Wahaj.<span>Ahmed</span></h1>
       <img 
         src={menu_open} 
         alt="menu" 
