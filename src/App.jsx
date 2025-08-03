@@ -20,11 +20,11 @@ const App = () => {
       <div id="education">
         <Education />
       </div>
-      <div id="services">
-        <Services />
+      <div id="skills">
+        <Skills />
       </div>
-      <div id="work">
-        <MyWork />
+      <div id="projects">
+        <Projects />
       </div>
       <div id="contact">
         <Contact />

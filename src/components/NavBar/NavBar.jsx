@@ -57,13 +57,13 @@ const Navbar = () => {
             <p>Education</p>
           </AnchorLink>
         </li>
-        <li className={menu === 'services' ? 'active' : ''}>
-          <AnchorLink className='anchor-link' offset={50} href='#services' onClick={() => {setMenu('services'); closeMenu();}}>
-            <p>Services</p>
+        <li className={menu === 'skills' ? 'active' : ''}>
+          <AnchorLink className='anchor-link' offset={50} href='#skills' onClick={() => {setMenu('skills'); closeMenu();}}>
+            <p>Skills</p>
           </AnchorLink>
         </li>
-        <li className={menu === 'work' ? 'active' : ''}>
-          <AnchorLink className='anchor-link' offset={50} href='#work' onClick={() => {setMenu('work'); closeMenu();}}>
+        <li className={menu === 'projects' ? 'active' : ''}>
+          <AnchorLink className='anchor-link' offset={50} href='#projects' onClick={() => {setMenu('projects'); closeMenu();}}>
             <p>Projects</p>
           </AnchorLink>
         </li>
