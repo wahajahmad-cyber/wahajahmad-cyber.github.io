@@ -299,6 +299,11 @@
         filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
     }
 
+    .hero-social a[href*="t.me"]:hover {
+        color: #24A1DE;
+        filter: drop-shadow(0 0 8px rgba(36, 161, 222, 0.8));
+    }
+
     .hero-social a[href*="x.com"] {
         color: #fff;
         filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
@@ -332,6 +337,11 @@
     .hero-social a[href*="discord"] {
         color: #7289DA;
         filter: drop-shadow(0 0 8px rgba(114, 137, 218, 0.4));
+    }
+
+    .hero-social a[href*="t.me"] {
+        color: #24A1DE;
+        filter: drop-shadow(0 0 8px rgba(36, 161, 222, 0.4));
     }
 
     .hero-social a::after {
