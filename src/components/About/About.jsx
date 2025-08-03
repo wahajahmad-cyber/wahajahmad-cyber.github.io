@@ -20,10 +20,10 @@ const About = () => {
             <div className="key-highlights">
               <p>-I've completed multiple Bootcamps and hands-on projects, including automated deployments on AWS using Kubernetes and Argo CD, as well as CI/CD integration using Jenkins. My mission is to bridge the gap between development and operations through automation and scalability.</p>
               <br />
-              <p>-Beyond the terminal and YAML files, I love writing LinkedIn posts, learning from real-world DevOps scenarios, and connecting with like-minded tech enthusiasts. I'm continuously evolving in my DevOps journey and always excited to take on new challenges!</p>
+              <p>-Beyond the terminal and YAML files, I love writing LinkedIn posts, learning from real-world DevOps scenarios, and connecting with like-minded tech enthusiasts. I'm continuously evolving in my DevOps journey and always excited to take on new challenges.</p>
             </div>
 
-            <p>I am passionate about problem-solving in cloud infrastructure, continuously exploring emerging technologies, and improving system reliability through automation and best practices.</p>
+            <p>Driven by a strong curiosity for cloud infrastructure, I actively explore new technologies and practices that enhance scalability and resilience. I’m especially passionate about solving complex infrastructure problems, streamlining operations through automation, and delivering reliable systems that scale.</p>
           </div>
         </div>
       </div>
