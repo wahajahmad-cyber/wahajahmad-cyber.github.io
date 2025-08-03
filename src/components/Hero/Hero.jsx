@@ -5,7 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { TypeAnimation } from 'react-type-animation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faInstagram, faDiscord, faXTwitter } from '@fortawesome/free-brands-svg-icons'
-import Resume from '../../assets/SurajMallickResume.pdf'
+import Resume from '../../assets/Wahaj-Resume.pdf'
 
 const Hero = () => {
   useEffect(() => {
