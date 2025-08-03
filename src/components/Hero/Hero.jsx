@@ -4,7 +4,7 @@ import pfp from '../../assets/pfp.jpg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { TypeAnimation } from 'react-type-animation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin, faInstagram, faDiscord, faXTwitter, faTelegram } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faInstagram, faDiscord, faTelegram } from '@fortawesome/free-brands-svg-icons'
 import Resume from '../../assets/Wahaj-Resume.pdf'
 
 const Hero = () => {
@@ -75,7 +75,7 @@ const Hero = () => {
       <img src={pfp} alt="" />
       <div className="hero-content">
         <h1>
-          <span>Hey! I&apos;m Wahaj Ahmed,</span><br/>
+          <span>Hey! I'm Wahaj Ahmed,</span><br/>
           a DevOps Engineer
         </h1>
         <TypeAnimation
