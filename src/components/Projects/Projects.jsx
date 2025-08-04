@@ -6,11 +6,22 @@ const Projects = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const desiredRepos = [
+    "Wanderlust-Mega-Project",
+    "E-Commerce-App-Project",
+    "BankApp-DevSecOps-Project",
+    "Netflix-DevSecOps-Project",
+    "Full-Stack-ChatApp",
+    "Two-Tier-Flask-App"
+  ];
+
   useEffect(() => {
     fetch('https://api.github.com/users/wahajahmad-cyber/repos')
       .then(response => response.json())
       .then(data => {
-        setRepos(data);
+        const filteredRepos = data.filter(repo => desiredRepos.includes(repo.name));
+        const sortedRepos = filteredRepos.sort((a, b) => desiredRepos.indexOf(a.name) - desiredRepos.indexOf(b.name));
+        setRepos(sortedRepos);
         setLoading(false);
       })
       .catch(error => {
@@ -28,7 +39,7 @@ const Projects = () => {
         {loading ? (
           <p>Loading repositories...</p>
         ) : (
-          repos.slice(0, 6).map((repo) => (
+          repos.map((repo) => (
             <div key={repo.id} className="repo-card">
               <h3>{repo.name}</h3>
               <p>{repo.description || 'No description available'}</p>
