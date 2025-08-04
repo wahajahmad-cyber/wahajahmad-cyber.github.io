@@ -7,7 +7,7 @@ const Projects = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://api.github.com/users/yonlysuraj/repos')
+    fetch('https://api.github.com/users/wahajahmad-cyber/repos')
       .then(response => response.json())
       .then(data => {
         setRepos(data);
@@ -40,7 +40,7 @@ const Projects = () => {
         )}
       </div>
       <div className="showmore">
-        <a href="https://github.com/yonlysuraj" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/wahajahmad-cyber" target="_blank" rel="noopener noreferrer">
           <p>View More on GitHub</p>
           <img src={arrow_icon} alt="" />
         </a>
