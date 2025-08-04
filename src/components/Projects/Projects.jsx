@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import './MyWork.css'
+import './Projects.css'
 import arrow_icon from '../../assets/arrow_icon.svg'
 
-const MyWork = () => {
+const Projects = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -20,11 +20,11 @@ const MyWork = () => {
   }, []);
 
   return (
-    <div id='work' className='my-work'>
-      <div className="my-work-title">
-        <h1>Latest Work<span>.</span></h1>
+    <div id='projects' className='projects'>
+      <div className="projects-title">
+        <h1>Latest Projects<span>.</span></h1>
       </div>
-      <div className="my-work-container">
+      <div className="projects-container">
         {loading ? (
           <p>Loading repositories...</p>
         ) : (
@@ -49,4 +49,4 @@ const MyWork = () => {
   )
 }
 
-export default MyWork
+export default Projects;

@@ -1,4 +1,4 @@
-q.my-work{
+q.projects{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,7 +6,7 @@ q.my-work{
     gap: 80px;
     margin: 80px 170px;
 }
-.my-work {
+.projects {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,13 +17,13 @@ q.my-work{
     position: relative;
     z-index: 2;  /* Keep MyWork section above particles */
 }
-.my-work-title{
+.projects-title{
     position: relative;
     margin-bottom: 40px;
     text-align: center;
     width: 100%;
 }
-.my-work-title {
+.projects-title {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@ q.my-work{
     position: relative;
     z-index: 2;  /* Keep title above particles */
 }
-.my-work-title h1{
+.projects-title h1{
     font-size: 48px;
     font-weight: 700;
     color: #fff;
@@ -40,18 +40,18 @@ q.my-work{
     letter-spacing: 2px;
     text-align: center;
 }
-.my-work-title h1 {
+.projects-title h1 {
     font-size: 48px;
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-.my-work-title span {
+.projects-title span {
     color: #61DBFB;
     font-weight: 800;
 }
-.my-work-title::after {
+.projects-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -63,18 +63,18 @@ q.my-work{
     border-radius: 2px;
 }
 /* Remove or comment out the duplicate h1 style with gradient */
-/* .my-work-title h1 {
+/* .projects-title h1 {
     font-size: 64px;
     background: linear-gradient(...);
     ...
 } */
-.my-work-title img{
+.projects-title img{
     display: none;
 }
-.my-work-title img {
+.projects-title img {
     display: none;
 }
-.my-work-container{
+.projects-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -85,14 +85,14 @@ q.my-work{
     position: relative;
     z-index: 2;  /* Keep grid container above particles */
 }
-.my-work-container img{
+.projects-container img{
     box-sizing: border-box;
     width: 419px;
     height: 280px;
     transition: 0.3s;
     cursor: pointer;
 }
-.my-work-container img:hover{
+.projects-container img:hover{
     transform:scale(1.10);
     border-radius: 10px;
     transition: 0.3s;
@@ -282,26 +282,26 @@ q.my-work{
     color: inherit;
 }
 @media (max-width:768px) {
-    .my-work{
+    .projects{
         gap: 30px;
         margin: 40px auto;
         padding: 0 20px;
         align-items: center;
     }
-    .my-work-title h1{
+    .projects-title h1{
         padding: 0;
         font-size: 38px;
         font-weight: 600;
     }
-    .my-work-title img{
+    .projects-title img{
         width: 130px;
         right: -20px;
     }
-    .my-work-title::after {
+    .projects-title::after {
         width: 40px;
         height: 3px;
     }
-    .my-work-container{
+    .projects-container{
         grid-template-columns: repeat(2, 1fr);
         margin-top: -10%;
         gap: 20px;
@@ -326,11 +326,11 @@ q.my-work{
         padding: 10px 20px;
         font-size: 14px;
     }
-    .my-work-title h1 {
+    .projects-title h1 {
         font-size: 38px;
     }
 
-    .my-work-title::after {
+    .projects-title::after {
         width: 40px;
         height: 3px;
     }
@@ -404,7 +404,7 @@ q.my-work{
     }
 }
 @media (max-width: 480px) {
-    .my-work-container {
+    .projects-container {
         grid-template-columns: 1fr;
     }
     

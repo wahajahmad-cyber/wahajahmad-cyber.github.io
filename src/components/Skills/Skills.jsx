@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "./Services.css";
+import "./Skills.css";
 import theme_pattern from "../../assets/theme_pattern.svg";
 import ServicesData from "../../assets/services_data";
 import { FaReact, FaCode, FaAws, FaTerminal, FaDatabase, FaGithub } from "react-icons/fa";
@@ -13,7 +13,7 @@ const icons = [
   { component: FaGithub, color: "#ffff" }
 ];
 
-const Services = () => {
+const Skills = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -28,28 +28,28 @@ const Services = () => {
       rootMargin: '50px' // Added margin to trigger earlier
     });
 
-    const serviceCards = document.querySelectorAll('.services-format');
-    serviceCards.forEach(card => observer.observe(card));
+    const skillCards = document.querySelectorAll('.skills-format');
+    skillCards.forEach(card => observer.observe(card));
 
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div id="services" className="services">
-      <div className="services-title">
-        <h1>My Services<span>.</span></h1>
+    <div id="skills" className="skills">
+      <div className="skills-title">
+        <h1>My Skills<span>.</span></h1>
         <img src={theme_pattern} alt="Theme Pattern" />
       </div>
-      <div className="services-container">
+      <div className="skills-container">
         {ServicesData.map((service, index) => {
           const IconComponent = icons[index]?.component || FaCode;
           return (
-            <div key={index} className="services-format fade-up">
-              <div className="service-header">
-                <span className="service-number">{service.s_no}</span>
+            <div key={index} className="skills-format fade-up">
+              <div className="skill-header">
+                <span className="skill-number">{service.s_no}</span>
                 <IconComponent
                   size={48}
-                  className="service-icon"
+                  className="skill-icon"
                 />
               </div>
               <h2>{service.s_name}</h2>
@@ -62,4 +62,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Skills;

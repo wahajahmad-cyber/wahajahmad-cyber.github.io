@@ -1,4 +1,4 @@
-.services {
+.skills {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,17 +8,17 @@
     max-width: 1200px;
     padding: 4rem 2rem;
     position: relative;
-    z-index: 2;  /* Keep services section above particles */
+    z-index: 2;  /* Keep skills section above particles */
 }
 
-.services-title {
+.skills-title {
     position: relative;
     margin-bottom: 40px;
     position: relative;
     z-index: 2;  /* Keep title above particles */
 }
 
-.services-title h1 {
+.skills-title h1 {
     font-size: 48px;
     font-weight: 700;
     color: #fff;
@@ -27,12 +27,12 @@
     text-align: center;
 }
 
-.services-title span {
+.skills-title span {
     color: #61DBFB;
     font-weight: 800;
 }
 
-.services-title::after {
+.skills-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -45,11 +45,11 @@
 }
 
 /* Remove the theme pattern image */
-.services-title img {
+.skills-title img {
     display: none;
 }
 
-.services-container {
+.skills-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
@@ -60,7 +60,7 @@
     z-index: 2;  /* Keep container above particles */
 }
 
-.services-format {
+.skills-format {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -79,7 +79,7 @@
     z-index: 2;  /* Keep service cards above particles */
 }
 
-.services-format:hover {
+.skills-format:hover {
     transform: translateY(-8px);
     background: rgba(128, 128, 128, 0.1);
     border-color: grey;
@@ -88,64 +88,64 @@
 }
 
 /* Icon Styling */
-.service-icon {
+.skill-icon {
     color: #888;
     font-size: 48px; /* Increased icon size */
     margin: 20px 0;
     transition: all 0.3s ease-in-out;
 }
 
-.services-format:hover .service-icon {
+.skills-format:hover .skill-icon {
     color: inherit;
     text-shadow: 0 0 12px currentColor;
 }
 
 /* Specific icon colors on hover */
-.services-format:nth-child(1):hover .service-icon { 
+.skills-format:nth-child(1):hover .skill-icon { 
     color: #61DBFB;
     filter: drop-shadow(0 0 8px #61DBFB) brightness(1.2);
     text-shadow: 0 0 15px #61DBFB;
 }
 
-.services-format:nth-child(2):hover .service-icon { 
+.skills-format:nth-child(2):hover .skill-icon { 
     color: #ed92f5;
     filter: drop-shadow(0 0 8px #ed92f5) brightness(1.2);
     text-shadow: 0 0 15px #ed92f5;
 }
 
-.services-format:nth-child(3):hover .service-icon { 
+.skills-format:nth-child(3):hover .skill-icon { 
     color: #FF9900;
     filter: drop-shadow(0 0 8px #FF9900) brightness(1.2);
     text-shadow: 0 0 15px #FF9900;
 }
 
-.services-format:nth-child(4):hover .service-icon { 
+.skills-format:nth-child(4):hover .skill-icon { 
     color: #00ff00;
     filter: drop-shadow(0 0 8px #00ff00) brightness(1.2);
     text-shadow: 0 0 15px #00ff00;
 }
 
-.services-format:nth-child(5):hover .service-icon { 
+.skills-format:nth-child(5):hover .skill-icon { 
     color: #00758f;
     filter: drop-shadow(0 0 8px #00758f) brightness(1.2);
     text-shadow: 0 0 15px #00758f;
 }
 
-.services-format:nth-child(6):hover .service-icon { 
+.skills-format:nth-child(6):hover .skill-icon { 
     color: #ffffff;
     filter: drop-shadow(0 0 8px #ffffff) brightness(1.2);
     text-shadow: 0 0 15px #ffffff;
 }
 
 /* Text Styling */
-.services-format h2 {
+.skills-format h2 {
     font-size: 26px;
     font-weight: 600;
     margin: 1rem 0;
     color: white;
 }
 
-.services-format p {
+.skills-format p {
     color: #888;
     font-size: 17px;
     line-height: 1.7;
@@ -153,14 +153,14 @@
     margin: 0 auto;
 }
 
-.services-readmore {
+.skills-readmore {
     display: flex;
     gap: 20px;
     align-items: center;
     margin-top: 20px;
 }
 
-.service-header {
+.skill-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -168,7 +168,7 @@
     margin-bottom: 1.5rem;
 }
 
-.service-number {
+.skill-number {
     color: grey;
     font-size: 1.2rem;
     font-weight: 500;
@@ -176,42 +176,42 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .services-container {
+    .skills-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .services {
+    .skills {
         margin: 40px 20px;
         padding: 2rem 1rem;
         gap: 30px;
         align-items: center; /* Changed from flex-start to center */
     }
 
-    .services-title {
+    .skills-title {
         width: 100%;
         text-align: center;
         margin-bottom: 30px;
     }
 
-    .services-title h1 {
+    .skills-title h1 {
         font-size: 38px;
         text-align: center;
     }
 
-    .services-title::after {
+    .skills-title::after {
         width: 40px;
         height: 3px;
     }
 
-    .services-container {
+    .skills-container {
         grid-template-columns: 1fr;
         margin-left: -2.5%; /* Adjusted margin */ 
         gap: 2rem;
     }
 
-    .services-format {
+    .skills-format {
         gap: 20px;
         padding: 2.5rem 1.5rem;
         min-height: auto;
@@ -221,7 +221,7 @@
         z-index: 2;
     }
 
-    .services-format:hover {
+    .skills-format:hover {
         transform: none;
         background: rgba(255, 255, 255, 0.05);
         border-color: rgba(255, 255, 255, 0.1);
@@ -229,62 +229,62 @@
     }
 
     /* Always show icon colors and glow on mobile */
-    .services-format:nth-child(1) .service-icon { 
+    .skills-format:nth-child(1) .skill-icon { 
         color: #61DBFB;
         text-shadow: 0 0 12px #61DBFB;
         filter: drop-shadow(0 0 8px #61DBFB) brightness(1.5);
         text-shadow: 0 0 15px #61DBFB, 0 0 25px #61DBFB;
     }
 
-    .services-format:nth-child(2) .service-icon { 
+    .skills-format:nth-child(2) .skill-icon { 
         color: #ed92f5;
         text-shadow: 0 0 12px #ed92f5;
         filter: drop-shadow(0 0 8px #ed92f5) brightness(1.5);
         text-shadow: 0 0 15px #ed92f5, 0 0 25px #ed92f5;
     }
 
-    .services-format:nth-child(3) .service-icon { 
+    .skills-format:nth-child(3) .skill-icon { 
         color: #FF9900;
         text-shadow: 0 0 12px #FF9900;
         filter: drop-shadow(0 0 8px #FF9900) brightness(1.5);
         text-shadow: 0 0 15px #FF9900, 0 0 25px #FF9900;
     }
 
-    .services-format:nth-child(4) .service-icon { 
+    .skills-format:nth-child(4) .skill-icon { 
         color: #00ff00;
         text-shadow: 0 0 12px #00ff00;
         filter: drop-shadow(0 0 8px #00ff00) brightness(1.5);
         text-shadow: 0 0 15px #00ff00, 0 0 25px #00ff00;
     }
 
-    .services-format:nth-child(5) .service-icon { 
+    .skills-format:nth-child(5) .skill-icon { 
         color: #00758f;
         text-shadow: 0 0 12px #00758f;
         filter: drop-shadow(0 0 8px #00758f) brightness(1.5);
         text-shadow: 0 0 15px #00758f, 0 0 25px #00758f;
     }
 
-    .services-format:nth-child(6) .service-icon { 
+    .skills-format:nth-child(6) .skill-icon { 
         color: #ffff;
         text-shadow: 0 0 12px #ffff;
         filter: drop-shadow(0 0 8px #ffffff) brightness(1.5);
         text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff;
     }
 
-    .service-icon {
+    .skill-icon {
         font-size: 36px;
         transition: none;
     }
 
-    .services-format h2 {
+    .skills-format h2 {
         font-size: 24px;
     }
 
-    .services-format p {
+    .skills-format p {
         font-size: 16px;
     }
 
-    .services-format {
+    .skills-format {
         opacity: 0;
         transform: translateY(20px); /* Reduced distance */
         animation: none;
@@ -293,7 +293,7 @@
         z-index: 2;
     }
 
-    .services-format.show {
+    .skills-format.show {
         animation: cardEntrance 0.5s ease-out forwards; /* Reduced duration */
         position: relative;
         z-index: 2;
@@ -311,19 +311,19 @@
     }
 
     /* Faster staggered animations */
-    .services-format.show:nth-child(1) { animation-delay: 0.05s; }
-    .services-format.show:nth-child(2) { animation-delay: 0.1s; }
-    .services-format.show:nth-child(3) { animation-delay: 0.15s; }
-    .services-format.show:nth-child(4) { animation-delay: 0.2s; }
-    .services-format.show:nth-child(5) { animation-delay: 0.25s; }
-    .services-format.show:nth-child(6) { animation-delay: 0.3s; }
+    .skills-format.show:nth-child(1) { animation-delay: 0.05s; }
+    .skills-format.show:nth-child(2) { animation-delay: 0.1s; }
+    .skills-format.show:nth-child(3) { animation-delay: 0.15s; }
+    .skills-format.show:nth-child(4) { animation-delay: 0.2s; }
+    .skills-format.show:nth-child(5) { animation-delay: 0.25s; }
+    .skills-format.show:nth-child(6) { animation-delay: 0.3s; }
 
     /* Remove existing transition-delay properties */
-    .services-format.fade-up:nth-child(n) {
+    .skills-format.fade-up:nth-child(n) {
         transition-delay: 0s;
     }
 
-    .services-container {
+    .skills-container {
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 0.5rem;
