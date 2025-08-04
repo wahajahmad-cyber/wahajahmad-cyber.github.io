@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './NavBar.css';
 import menu_open from '../../assets/menu_open.svg';
 import menu_close from '../../assets/menu_close.svg';
@@ -25,6 +25,28 @@ const Navbar = () => {
     setMenu('home');
     closeMenu();
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'education', 'skills', 'projects', 'contact'];
+      const scrollPosition = window.scrollY + 100; // Add offset for better accuracy
+
+      for (const sectionId of sections) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+            setMenu(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <nav className='navbar'>
