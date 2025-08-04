@@ -22,7 +22,7 @@ const Projects = () => {
   return (
     <div id='projects' className='projects'>
       <div className="projects-title">
-        <h1>Latest Projects<span>.</span></h1>
+        <h1>Projects<span>.</span></h1>
       </div>
       <div className="projects-container">
         {loading ? (
